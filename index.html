@@ -120,11 +120,11 @@ tr.ctr:hover td{background:#f7faff;}
 .chip:hover:not(.on){background:var(--pale);}
 /* EXPANDED ROW */
 .exp-row td{padding:0;background:#f7fbff;}
-.exp-panel{padding:14px 18px;border-top:2px solid var(--blue);display:grid;grid-template-columns:160px 1fr 1fr;gap:18px;}
-.exp-logo-ph{width:150px;height:90px;border:2px dashed var(--brd);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:var(--mut);font-size:11px;text-align:center;transition:all .15s;background:var(--wh);}
+.exp-panel{padding:14px 18px;border-top:2px solid var(--blue);display:grid;grid-template-columns:245px 1fr 1fr;gap:22px;}
+.exp-logo-ph{width:225px;height:135px;border:2px dashed var(--brd);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:var(--mut);font-size:11px;text-align:center;transition:all .15s;background:var(--wh);}
 .exp-logo-ph:hover{border-color:var(--blue);color:var(--blue);background:var(--pale);}
-.exp-logo-img{width:150px;height:90px;border-radius:8px;background:var(--pale);border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.exp-logo-img img{max-width:140px;max-height:80px;object-fit:contain;}
+.exp-logo-img{width:225px;height:135px;border-radius:8px;background:var(--pale);border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.exp-logo-img img{max-width:210px;max-height:120px;object-fit:contain;}
 .folder-btn{font-size:10px;font-weight:600;color:var(--navy3);background:var(--pale);border:1px solid var(--brd);border-radius:5px;padding:3px 9px;cursor:pointer;display:flex;align-items:center;gap:4px;font-family:var(--f);transition:all .15s;width:100%;justify-content:center;margin-top:6px;}
 .folder-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
 .exp-col{display:flex;flex-direction:column;gap:8px;}
@@ -213,48 +213,48 @@ tr.ctr:hover td{background:#f7faff;}
 <script>
 
 const INITIAL=[
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Arte Gaúcha","responsaveis":["BRANCO"],"valores_sistemas":{"DATACAIXA":49},"id":"c001","seq":1,"nome":"ARTE GAUCHA - BRIGADEIRO GRILL","wpp":"","email":"","cnpj":"07.768.470/0001-49","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_MENSAL","inicio":"01/03/2018","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["BREIDE"],"valores_sistemas":{"DATACAIXA":49},"id":"c002","seq":2,"nome":"PEPPERS - BOTECO SANTA CRUZ","wpp":"","email":"","cnpj":"10.447.011/0001-78","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"22/03/2018","ativo":true,"obs":""},
-  {"certVenc":"06/10/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Bazar HLC","responsaveis":["LUCIDIA"],"valores_sistemas":{"DATACAIXA":49},"id":"c003","seq":3,"nome":"BAZAR E PAPELARIA H.L.C.","wpp":"11 95268-2654","email":"","cnpj":"10.762.023/0001-97","sistemas":["DATACAIXA"],"valor":0,"cobranca":"SEM_COBRANCA","inicio":"13/07/2018","ativo":true,"obs":"Sem cobrança"},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["JOSÉ","AMERICANO"],"valores_sistemas":{"DATACAIXA":49},"id":"c004","seq":4,"nome":"LOMBO - BIG BIG","wpp":"","email":"","cnpj":"62.760.731/0001-92","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_MENSAL","inicio":"14/07/2018","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["FÁBIO"],"valores_sistemas":{"DATACAIXA":49},"id":"c005","seq":5,"nome":"WL AEROPORTO - BOTECO 7109","wpp":"","email":"","cnpj":"17.030.546/0001-98","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"06/10/2018","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["SAMUEL"],"valores_sistemas":{"DATACAIXA":49},"id":"c006","seq":6,"nome":"FABIANO MARÇAL - LANCHES JARDINS","wpp":"","email":"","cnpj":"06.942.310/0001-01","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"17/12/2018","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["SIDNEY","DEBORA"],"valores_sistemas":{"DATACAIXA":49},"id":"c007","seq":7,"nome":"CANOLA - CIRÚRGICA SANTO EDUARDO","wpp":"","email":"","cnpj":"25.127.706/0001-40","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"20/12/2018","ativo":true,"obs":""},
-  {"certVenc":"12/12/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Bazar Turquesa","responsaveis":["JESSICA"],"valores_sistemas":{"DATACAIXA":49},"id":"c008","seq":8,"nome":"BAZAR TURQUEZA","wpp":"(11) 91538-0044","email":"","cnpj":"06.170.150/0001-20","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_MENSAL","inicio":"05/02/2019","ativo":true,"obs":""},
-  {"certVenc":"02/10/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Princesinha de Itapevi","responsaveis":["ROBSON"],"valores_sistemas":{"DATACAIXA":49},"id":"c009","seq":9,"nome":"PRINCESINHA DE ITAPEVI","wpp":"11 95113-0811","email":"","cnpj":"26.683.039/0001-44","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"11/02/2019","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["RILLAN"],"valores_sistemas":{"DATACAIXA":49},"id":"c010","seq":10,"nome":"DIVINO'S BROOKLIN","wpp":"","email":"","cnpj":"32.951.165/0001-35","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"18/04/2019","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["CESAR","ELENEIDE"],"valores_sistemas":{"DATACAIXA":49},"id":"c011","seq":11,"nome":"TCHAN - LANCHES TIDOCA","wpp":"","email":"","cnpj":"48.755.094/0001-35","sistemas":["DATACAIXA"],"valor":280,"cobranca":"BOLETO","inicio":"26/04/2019","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["MATEUS","LARA"],"valores_sistemas":{"DATACAIXA":49},"id":"c012","seq":12,"nome":"ESQ. PIONEIRO DA VILA - BOTECO ALVORADA","wpp":"","email":"","cnpj":"08.478.167/0001-74","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"27/04/2019","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["DEBORA"],"valores_sistemas":{"DATACAIXA":49},"id":"c013","seq":13,"nome":"CIRURGICA PAIXAO","wpp":"","email":"","cnpj":"34.046.190/0001-08","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"09/06/2019","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["MANOEL"],"valores_sistemas":{"DATACAIXA":49},"id":"c014","seq":14,"nome":"CHARME DA VILA","wpp":"","email":"","cnpj":"33.489.125/0001-86","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"01/08/2019","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["DÃO"],"valores_sistemas":{"DATACAIXA":49},"id":"c015","seq":15,"nome":"CALCADAO DE OURO","wpp":"","email":"","cnpj":"31.660.199/0001-08","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_SEMESTRAL","inicio":"14/10/2019","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["IVAN"],"valores_sistemas":{"DATACAIXA":49},"id":"c016","seq":16,"nome":"BOTECO MURICI","wpp":"","email":"","cnpj":"","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"21/10/2019","ativo":true,"obs":"CNPJ pendente"},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["CHARLES"],"valores_sistemas":{"DATACAIXA":49},"id":"c017","seq":17,"nome":"LANCHONETE 720","wpp":"","email":"","cnpj":"53.482.287/0001-08","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"21/10/2019","ativo":true,"obs":""},
-  {"certVenc":"21/11/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Emporio das Embalagens","responsaveis":["KATIA"],"valores_sistemas":{"VELO":45},"id":"c018","seq":18,"nome":"EMPORIO DAS EMBALAGENS","wpp":"11 95953-4031","email":"","cnpj":"38.117.184/0001-47","sistemas":["VELO"],"valor":200,"cobranca":"PIX_MENSAL","inicio":"06/10/2020","ativo":true,"obs":""},
-  {"certVenc":"20/01/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Ponto das Bandeiras","responsaveis":["ARTUR"],"valores_sistemas":{"STI3":112,"PEDIZAP":99},"id":"c019","seq":19,"nome":"PONTO DAS BANDEIRAS","wpp":"11 98692-8507","email":"","cnpj":"24.245.978/0001-81","sistemas":["STI3","PEDIZAP"],"valor":405,"cobranca":"BOLETO","inicio":"22/12/2020","ativo":true,"obs":"STi3 boleto + Pedizap PIX R$99"},
-  {"certVenc":"17/12/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Trigale","responsaveis":["MARCIO","THIAGO"],"valores_sistemas":{"STI3":88},"id":"c020","seq":20,"nome":"PANIFICADORA TRIGALE","wpp":"11 99944-8172","email":"","cnpj":"69.212.447/0001-20","sistemas":["STI3"],"valor":295,"cobranca":"BOLETO","inicio":"23/04/2021","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["ELISANGELA"],"valores_sistemas":{"DATACAIXA":49},"id":"c021","seq":21,"nome":"E. BRITO - MERCADINHO FAMILIA","wpp":"","email":"","cnpj":"17.870.915/0001-50","sistemas":["DATACAIXA"],"valor":200,"cobranca":"PIX_MENSAL","inicio":"15/05/2021","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["ANDRÉ","KELLY"],"valores_sistemas":{"DATACAIXA":49},"id":"c022","seq":22,"nome":"PADARIA ELAINE","wpp":"","email":"","cnpj":"54.295.944/0001-62","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"30/05/2021","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["VANESSA"],"valores_sistemas":{"DATACAIXA":79},"id":"c023","seq":23,"nome":"COLEGIO SANTA CATARINA DE SENA","wpp":"","email":"","cnpj":"62.047.071/0002-88","sistemas":["DATACAIXA"],"valor":180,"cobranca":"PIX_MENSAL","inicio":"18/02/2022","ativo":true,"obs":""},
-  {"certVenc":"05/09/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Bazar da Estela","responsaveis":["DANIELLA"],"valores_sistemas":{"DATACAIXA":49},"id":"c024","seq":24,"nome":"MARIA AURISTELA - BAZAR DA ESTELA","wpp":"(11) 99205-5551","email":"","cnpj":"11.479.844/0001-83","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_MENSAL","inicio":"14/04/2022","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["AGNES"],"valores_sistemas":{"DATACAIXA":49},"id":"c025","seq":25,"nome":"AGNES ARAUJO - ESPETOS DANIBOY","wpp":"","email":"","cnpj":"24.537.900/0001-30","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_MENSAL","inicio":"31/03/2022","ativo":true,"obs":""},
-  {"certVenc":"13/01/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Princesinha de Barueri","responsaveis":["RICARDO","FABIO"],"valores_sistemas":{"DATACAIXA":49},"id":"c026","seq":26,"nome":"PRINCESINHA DE BARUERI","wpp":"11 95177-3981","email":"","cnpj":"09.008.478/0001-32","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_SEMESTRAL","inicio":"28/05/2022","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Canarinho de Barueri","responsaveis":["BENDITO"],"valores_sistemas":{"DATACAIXA":49},"id":"c027","seq":27,"nome":"CANARINHO DE BARUERI","wpp":"11 98399-4020","email":"","cnpj":"43.290.477/0001-61","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_SEMESTRAL","inicio":"28/05/2022","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["GIOVANE","MARCOS"],"valores_sistemas":{"DATACAIXA":49},"id":"c028","seq":28,"nome":"DOM CASTRO","wpp":"","email":"","cnpj":"44.964.983/0001-51","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"28/05/2022","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["FABIANO","GILVAR"],"valores_sistemas":{"DATACAIXA":79},"id":"c029","seq":29,"nome":"ADL","wpp":"","email":"","cnpj":"15.353.655/0001-10","sistemas":["DATACAIXA"],"valor":180,"cobranca":"BOLETO","inicio":"18/10/2022","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["MATEUS"],"valores_sistemas":{"DATACAIXA":49},"id":"c030","seq":30,"nome":"CHARME DO BROOKLIN","wpp":"","email":"","cnpj":"24.977.650/0001-50","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"","ativo":true,"obs":"Data de início a confirmar"},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["LAIS","IVO"],"valores_sistemas":{"DATACAIXA":49},"id":"c031","seq":31,"nome":"GERIARTE COMÉRCIO DE FRALDAS","wpp":"","email":"","cnpj":"59.808.068/0001-44","sistemas":["DATACAIXA"],"valor":150,"cobranca":"PIX_MENSAL","inicio":"","ativo":true,"obs":"Data de início a confirmar"},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["THAIS"],"valores_sistemas":{"STI3":104},"id":"c032","seq":32,"nome":"ESQUINA DA ECONOMIA","wpp":"","email":"","cnpj":"60.545.877/0001-90","sistemas":["STI3"],"valor":295,"cobranca":"PIX_MENSAL","inicio":"21/01/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["DEBORA"],"valores_sistemas":{"DATACAIXA":49},"id":"c033","seq":33,"nome":"CIRÚRGICA ORTHO MEDIC","wpp":"","email":"","cnpj":"61.343.698/0001-32","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"10/12/2024","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["DALVA"],"valores_sistemas":{"DATACAIXA":49},"id":"c034","seq":34,"nome":"MAJO CONFEITARIA","wpp":"","email":"","cnpj":"45.735.790/0001-91","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"04/02/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["DEBORA"],"valores_sistemas":{"DATACAIXA":49},"id":"c035","seq":35,"nome":"CIRÚRGICA ORTHO MEDIC 2","wpp":"","email":"","cnpj":"63.142.771/0001-33","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"20/03/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["SABRINA"],"valores_sistemas":{"STI3":104},"id":"c036","seq":36,"nome":"ZITA MODAS","wpp":"","email":"","cnpj":"11.441.996/0001-97","sistemas":["STI3"],"valor":299,"cobranca":"PIX_MENSAL","inicio":"09/04/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["SABRINA"],"valores_sistemas":{"STI3":104},"id":"c037","seq":37,"nome":"ZITA CLOSET","wpp":"","email":"","cnpj":"61.852.442/0001-50","sistemas":["STI3"],"valor":299,"cobranca":"PIX_MENSAL","inicio":"09/04/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["TONINHO"],"valores_sistemas":{"DATACAIXA":49},"id":"c038","seq":38,"nome":"ESTAÇÃO UNIVERSITÁRIA","wpp":"","email":"","cnpj":"49.961.601/0001-50","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"07/05/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["VALDO"],"valores_sistemas":{"DATACAIXA":49},"id":"c039","seq":39,"nome":"SONHO DOCE","wpp":"","email":"","cnpj":"55.624.611/0001-24","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"21/05/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["JULIANA"],"valores_sistemas":{"DATACAIXA":49},"id":"c040","seq":40,"nome":"AMOR DE CAFÉ","wpp":"","email":"","cnpj":"63.632.561/0001-23","sistemas":["DATACAIXA"],"valor":150,"cobranca":"BOLETO","inicio":"12/06/2025","ativo":true,"obs":""},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["FERNANDO"],"valores_sistemas":{"STI3":137},"id":"c041","seq":41,"nome":"3F ARTIGOS ESCOLARES","wpp":"","email":"","cnpj":"61.037.043/0001-36","sistemas":["STI3"],"valor":339,"cobranca":"BOLETO","inicio":"10/07/2025","ativo":true,"obs":"Boleto semestral único"},
-  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["KAROLINE"],"valores_sistemas":{"VELO":85},"id":"c042","seq":42,"nome":"KK BEAUTY","wpp":"11 98248-5077","email":"","cnpj":"","sistemas":["VELO"],"valor":245,"cobranca":"PIX_MENSAL","inicio":"","ativo":false,"obs":""}
+  {"certVenc":"14/04/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Arte Gaúcha","responsaveis":["BRANCO"],"valores_sistemas":{"DATACAIXA":49},"id":"c001","obs":"","seq":1,"wpp":"(11) 97205-0783","cnpj":"07.768.470/0001-49","nome":"ARTE GAÚCHA - BRIGADEIRO GRILL","ativo":true,"email":"","valor":150,"inicio":"29/03/2018","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"12/08/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Peppers","responsaveis":["BREIDE"],"valores_sistemas":{"DATACAIXA":49},"id":"c002","obs":"","seq":2,"wpp":"(11) 98742-7694","cnpj":"10.447.011/0001-78","nome":"PEPPERS - BOTECO SANTA CRUZ","ativo":true,"email":"","valor":150,"inicio":"19/04/2018","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"06/10/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Bazar HLC","responsaveis":["LUCIDIA"],"valores_sistemas":{"DATACAIXA":49},"id":"c003","obs":"Sem cobrança","seq":3,"wpp":"11 95268-2654","cnpj":"10.762.023/0001-97","nome":"BAZAR E PAPELARIA H.L.C.","ativo":true,"email":"","valor":0,"inicio":"13/07/2018","cobranca":"SEM_COBRANCA","sistemas":["DATACAIXA"]},
+  {"certVenc":"09/02/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Lombo","responsaveis":["JOSÉ","AMERICANO"],"valores_sistemas":{"DATACAIXA":49},"id":"c004","obs":"","seq":4,"wpp":"(11) 98946-1982","cnpj":"62.760.731/0001-92","nome":"LOMBO - BIG BIG","ativo":true,"email":"","valor":150,"inicio":"11/08/2018","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"12/11/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\WL Aeroporto","responsaveis":["FÁBIO"],"valores_sistemas":{"DATACAIXA":49},"id":"c005","obs":"","seq":5,"wpp":"(11) 98720-9917","cnpj":"17.030.546/0001-98","nome":"WL AEROPORTO - BOTECO 7109","ativo":true,"email":"","valor":150,"inicio":"01/11/2018","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"26/01/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Lanches Jardins","responsaveis":["FABIANO","SAMUEL"],"valores_sistemas":{"DATACAIXA":49},"id":"c006","obs":"","seq":6,"wpp":"(11) 99966-9506","cnpj":"06.942.310/0001-01","nome":"FABIANO MARÇAL - LANCHES JARDINS","ativo":true,"email":"","valor":150,"inicio":"11/01/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"25/05/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Cirurgica Santo Eduardo","responsaveis":["DÉBORA","SIDNEY"],"valores_sistemas":{"DATACAIXA":49},"id":"c007","obs":"","seq":7,"wpp":"(11) 99458-7362","cnpj":"25.127.706/0001-40","nome":"CANOLA - CIRÚRGICA SANTO EDUARDO","ativo":true,"email":"","valor":150,"inicio":"14/01/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"12/12/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Bazar Turquesa","responsaveis":["JESSICA"],"valores_sistemas":{"DATACAIXA":49},"id":"c008","obs":"","seq":8,"wpp":"(11) 91538-0044","cnpj":"06.170.150/0001-20","nome":"BAZAR TURQUEZA","ativo":true,"email":"","valor":150,"inicio":"05/02/2019","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"02/10/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Princesinha de Itapevi","responsaveis":["ROBSON"],"valores_sistemas":{"DATACAIXA":49},"id":"c009","obs":"","seq":9,"wpp":"11 95113-0811","cnpj":"26.683.039/0001-44","nome":"PRINCESINHA DE ITAPEVI","ativo":true,"email":"","valor":150,"inicio":"11/02/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"20/04/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Divinos","responsaveis":["RILLAN"],"valores_sistemas":{"DATACAIXA":49},"id":"c010","obs":"","seq":10,"wpp":"(11) 95498-6896","cnpj":"32.951.165/0001-35","nome":"DIVINO'S BROOKLIN","ativo":true,"email":"","valor":150,"inicio":"11/05/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"07/04/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Tidoca","responsaveis":["ELENEIDE","CESAR"],"valores_sistemas":{"DATACAIXA":49},"id":"c011","obs":"","seq":11,"wpp":"(11) 98492-1251","cnpj":"48.755.094/0001-35","nome":"TCHAN - LANCHES TIDOCA","ativo":true,"email":"","valor":280,"inicio":"26/04/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"02/07/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Boteco Alvorada","responsaveis":["MATEUS"],"valores_sistemas":{"DATACAIXA":49},"id":"c012","obs":"","seq":12,"wpp":"(11) 95462-8798","cnpj":"08.478.167/0001-74","nome":"ESQUINA PIONEIRO DA VILA - BOTECO ALVORADA","ativo":true,"email":"","valor":150,"inicio":"30/05/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"26/05/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Cirurgica Paixao","responsaveis":["DÉBORA"],"valores_sistemas":{"DATACAIXA":49},"id":"c013","obs":"","seq":13,"wpp":"(11) 99458-7362","cnpj":"34.046.190/0001-08","nome":"CIRÚRGICA PAIXÃO","ativo":true,"email":"","valor":150,"inicio":"11/07/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"26/03/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Charme da Vila","responsaveis":["MANOEL"],"valores_sistemas":{"DATACAIXA":49},"id":"c014","obs":"","seq":14,"wpp":"(11) 98721-8505","cnpj":"33.489.125/0001-86","nome":"CHARME DA VILA","ativo":true,"email":"","valor":150,"inicio":"02/09/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"26/06/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Calçadão de Ouro","responsaveis":["DÃO"],"valores_sistemas":{"DATACAIXA":49},"id":"c015","obs":"","seq":15,"wpp":"(11) 98084-2175","cnpj":"31.660.199/0001-08","nome":"CALÇADÃO DE OURO","ativo":true,"email":"","valor":150,"inicio":"06/11/2019","cobranca":"PIX_SEMESTRAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"05/09/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Boteco Murici","responsaveis":["IVAN"],"valores_sistemas":{"DATACAIXA":49},"id":"c016","obs":"CNPJ pendente","seq":16,"wpp":"(11) 94856-8731","cnpj":"52.551.344/0001-92","nome":"BOTECO MURICI","ativo":true,"email":"","valor":150,"inicio":"13/11/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"05/11/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Lanch 720","responsaveis":["CHARLES"],"valores_sistemas":{"DATACAIXA":49},"id":"c017","obs":"","seq":17,"wpp":"(11) 98632-6539","cnpj":"53.482.287/0001-08","nome":"LANCHONETE 720","ativo":true,"email":"","valor":150,"inicio":"13/11/2019","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"21/11/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Emporio das Embalagens","responsaveis":["KATIA"],"valores_sistemas":{"VELO":45},"id":"c018","obs":"","seq":18,"wpp":"11 95953-4031","cnpj":"38.117.184/0001-47","nome":"EMPÓRIO DAS EMBALAGENS","ativo":true,"email":"","valor":200,"inicio":"06/10/2020","cobranca":"PIX_MENSAL","sistemas":["VELO"]},
+  {"certVenc":"20/01/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Ponto das Bandeiras","responsaveis":["ARTUR"],"valores_sistemas":{"STI3":112,"PEDIZAP":99},"id":"c019","obs":"STi3 boleto + Pedizap PIX R$99","seq":19,"wpp":"11 98692-8507","cnpj":"24.245.978/0001-81","nome":"PONTO DAS BANDEIRAS","ativo":true,"email":"","valor":405,"inicio":"22/12/2020","cobranca":"BOLETO","sistemas":["STI3","PEDIZAP"]},
+  {"certVenc":"17/12/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Trigale","responsaveis":["MARCIO","THIAGO"],"valores_sistemas":{"STI3":88},"id":"c020","obs":"","seq":20,"wpp":"11 99944-8172","cnpj":"69.212.447/0001-20","nome":"PANIFICADORA TRIGALE","ativo":true,"email":"","valor":295,"inicio":"23/04/2021","cobranca":"BOLETO","sistemas":["STI3"]},
+  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Mercadinho Familia","responsaveis":["ELISANGELA"],"valores_sistemas":{"DATACAIXA":49},"id":"c021","obs":"","seq":21,"wpp":"(11) 98691-0296","cnpj":"17.870.915/0001-50","nome":"E. BRITO - MERCADINHO FAMILIA","ativo":true,"email":"","valor":200,"inicio":"29/06/2021","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"04/09/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Elaine","responsaveis":["ANDRÉ","ANDERSON"],"valores_sistemas":{"DATACAIXA":49},"id":"c022","obs":"","seq":22,"wpp":"(11) 97686-1448","cnpj":"54.295.944/0001-62","nome":"PADARIA ELAINE","ativo":true,"email":"","valor":150,"inicio":"14/07/2021","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"25/09/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Colégio Santa Catarina de Sena","responsaveis":["VANESSA"],"valores_sistemas":{"DATACAIXA":79},"id":"c023","obs":"","seq":23,"wpp":"(11) 96630-5923","cnpj":"62.047.071/0002-88","nome":"COLÉGIO SANTA CATARINA DE SENA","ativo":true,"email":"secretaria@colegiosantacatarinadesena.com.br","valor":180,"inicio":"07/04/2022","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"05/09/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Bazar da Estela","responsaveis":["DANIELLA"],"valores_sistemas":{"DATACAIXA":49},"id":"c024","obs":"","seq":24,"wpp":"(11) 99205-5551","cnpj":"11.479.844/0001-83","nome":"MARIA AURISTELA - BAZAR DA ESTELA","ativo":true,"email":"","valor":150,"inicio":"14/04/2022","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"05/01/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Espetos Daniboy","responsaveis":["AGNES"],"valores_sistemas":{"DATACAIXA":49},"id":"c025","obs":"","seq":25,"wpp":"(11) 94702-9246","cnpj":"24.537.900/0001-30","nome":"AGNES ARAUJO - ESPETOS DANIBOY","ativo":true,"email":"","valor":150,"inicio":"31/03/2022","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"13/01/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Princesinha de Barueri","responsaveis":["RICARDO","FABIO"],"valores_sistemas":{"DATACAIXA":49},"id":"c026","obs":"","seq":26,"wpp":"11 95177-3981","cnpj":"09.008.478/0001-32","nome":"PRINCESINHA DE BARUERI","ativo":true,"email":"","valor":150,"inicio":"28/05/2022","cobranca":"PIX_SEMESTRAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Canarinho de Barueri","responsaveis":["BENDITO"],"valores_sistemas":{"DATACAIXA":49},"id":"c027","obs":"","seq":27,"wpp":"11 98399-4020","cnpj":"43.290.477/0001-61","nome":"CANARINHO DE BARUERI","ativo":true,"email":"","valor":150,"inicio":"28/05/2022","cobranca":"PIX_SEMESTRAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"20/01/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Dom Castro","responsaveis":["MARCOS","GIOVANE"],"valores_sistemas":{"DATACAIXA":49},"id":"c028","obs":"","seq":28,"wpp":"(11) 95967-4323","cnpj":"44.964.983/0001-51","nome":"DOM CASTRO","ativo":true,"email":"","valor":150,"inicio":"15/07/2022","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"03/10/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\ADL","responsaveis":["FABIANO","GILVAR"],"valores_sistemas":{"DATACAIXA":79},"id":"c029","obs":"","seq":29,"wpp":"(11) 99966-9506","cnpj":"15.353.655/0001-10","nome":"ADL","ativo":true,"email":"","valor":180,"inicio":"30/11/2022","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"01/07/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Charme do Brooklin","responsaveis":["MATEUS"],"valores_sistemas":{"DATACAIXA":49},"id":"c030","obs":"","seq":30,"wpp":"(11) 95462-8798","cnpj":"24.977.650/0001-50","nome":"CHARME DO BROOKLIN","ativo":true,"email":"","valor":150,"inicio":"10/04/2025","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"25/03/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\GeriArte","responsaveis":["LAÍS","IVO"],"valores_sistemas":{"DATACAIXA":49},"id":"c031","obs":"","seq":31,"wpp":"(11) 96468-9794","cnpj":"59.808.068/0001-44","nome":"GERIARTE COMÉRCIO DE FRALDAS","ativo":true,"email":"","valor":150,"inicio":"11/04/2025","cobranca":"PIX_MENSAL","sistemas":["DATACAIXA"]},
+  {"certVenc":"08/05/2027","xmlEnvio":"AUTOMATICO","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Esquina da Economia","responsaveis":["THAIS"],"valores_sistemas":{"STI3":104},"id":"c032","obs":"","seq":32,"wpp":"(11) 94710-0408","cnpj":"60.545.877/0001-90","nome":"ESQUINA DA ECONOMIA","ativo":true,"email":"","valor":295,"inicio":"12/07/2025","cobranca":"PIX_MENSAL","sistemas":["STI3"]},
+  {"certVenc":"02/07/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Cirurgica Pirajuçara","responsaveis":["DÉBORA"],"valores_sistemas":{"DATACAIXA":49},"id":"c033","obs":"","seq":33,"wpp":"(11) 99458-7362","cnpj":"61.343.698/0001-32","nome":"CIRÚRGICA ORTHO MEDIC - LOJA EMBU","ativo":true,"email":"","valor":150,"inicio":"06/06/2025","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"31/10/2026","xmlEnvio":"NAO_ENVIA","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Majo Confeitaria","responsaveis":["DALVA","JOSY"],"valores_sistemas":{"DATACAIXA":49},"id":"c034","obs":"","seq":34,"wpp":"(11) 95386-1505","cnpj":"45.735.790/0001-91","nome":"MAJO CONFEITARIA","ativo":true,"email":"","valor":150,"inicio":"30/07/2025","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"28/10/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Cirurgica Taboao","responsaveis":["ANA PAULA","DÉBORA"],"valores_sistemas":{"DATACAIXA":49},"id":"c035","obs":"","seq":35,"wpp":"(11) 97181-0652","cnpj":"63.142.771/0001-33","nome":"CIRÚRGICA ORTHO MEDIC 2 - LOJA TABOÃO","ativo":true,"email":"","valor":150,"inicio":"04/09/2025","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"28/05/2027","xmlEnvio":"AUTOMATICO","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Zita Modas","responsaveis":["SABRINA"],"valores_sistemas":{"STI3":104},"id":"c036","obs":"","seq":36,"wpp":"(11) 98388-1003","cnpj":"11.441.996/0001-97","nome":"ZITA MODAS - LOJA JD. COMERCIAL","ativo":true,"email":"sabrina-oliveira-mj@hotmail.com","valor":299,"inicio":"01/10/2025","cobranca":"PIX_MENSAL","sistemas":["STI3"]},
+  {"certVenc":"08/09/2026","xmlEnvio":"AUTOMATICO","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Zita Closet","responsaveis":["SABRINA"],"valores_sistemas":{"STI3":104},"id":"c037","obs":"","seq":37,"wpp":"(11) 98388-1003","cnpj":"61.852.442/0001-50","nome":"ZITA CLOSET - LOJA UNASP","ativo":true,"email":"sabrina-oliveira-mj@hotmail.com","valor":299,"inicio":"01/10/2025","cobranca":"PIX_MENSAL","sistemas":["STI3"]},
+  {"certVenc":"02/04/2027","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Estação Universitária","responsaveis":["TONINHO"],"valores_sistemas":{"DATACAIXA":49},"id":"c038","obs":"","seq":38,"wpp":"(11) 97710-5933","cnpj":"49.961.601/0001-50","nome":"ESTAÇÃO UNIVERSITÁRIA","ativo":true,"email":"","valor":150,"inicio":"28/10/2025","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Sonho Doce","responsaveis":["VALDO"],"valores_sistemas":{"DATACAIXA":49},"id":"c039","obs":"","seq":39,"wpp":"(11) 98615-6737","cnpj":"55.624.611/0001-24","nome":"SONHO DOCE","ativo":true,"email":"","valor":150,"inicio":"10/11/2025","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"25/11/2026","xmlEnvio":"MANUAL","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\Amor de Café","responsaveis":["JULIANA"],"valores_sistemas":{"DATACAIXA":49},"id":"c040","obs":"","seq":40,"wpp":"(11) 99334-7020","cnpj":"63.632.561/0001-23","nome":"AMOR DE CAFÉ","ativo":true,"email":"","valor":150,"inicio":"01/12/2025","cobranca":"BOLETO","sistemas":["DATACAIXA"]},
+  {"certVenc":"25/06/2026","xmlEnvio":"AUTOMATICO","pasta":"C:\\Users\\Paulo Henrique\\Desktop\\Automaze Tecnologia\\Clientes\\3F Artigos Escolares","responsaveis":["FERNANDO"],"valores_sistemas":{"STI3":137},"id":"c041","obs":"","seq":41,"wpp":"(11) 98484-8450","cnpj":"61.037.043/0001-36","nome":"3F ARTIGOS ESCOLARES","ativo":true,"email":"","valor":339,"inicio":"08/01/2026","cobranca":"PIX_MENSAL","sistemas":["STI3"]},
+  {"certVenc":"","xmlEnvio":"NAO_ENVIA","pasta":"","responsaveis":["KAROLINE"],"valores_sistemas":{"VELO":85},"id":"c042","obs":"","seq":42,"wpp":"11 98248-5077","cnpj":"","nome":"KK BEAUTY","ativo":false,"email":"","valor":245,"inicio":"","cobranca":"PIX_MENSAL","sistemas":["VELO"]}
 ];
 
 
@@ -290,7 +290,16 @@ let S={
   statuses:LS.load('statuses',{}),
   lancamentos:LS.load('lancamentos',[]),
   notifEnabled:LS.load('notifEnabled',false),
+  notifConfig:LS.load('notifConfig',{
+    billing:true,
+    syspay:true,
+    cert:true,
+    boleto:true,
+    xml:true,
+    simples:true
+  }),
   clientLogos:LS.load('clientLogos',{}),
+  clientLogoBg:LS.load('clientLogoBg',{}),
   fMonth:new Date().getMonth(),fYear:new Date().getFullYear(),
   driveClientId:LS.load('driveClientId',''),
   driveFileId:LS.load('driveFileId',''),
@@ -300,7 +309,7 @@ let S={
 };
 
 // Init debts
-S.debts=LS.load('debts',{"c004": [{"id": "d1780429147106", "desc": "Mensalidade Junho 2026", "valor": 150, "mes": 4, "ano": 2026, "pago": false, "dataPagto": null}], "c021": [{"id": "d1780429690607", "desc": "Mensalidade Junho 2026", "valor": 200, "mes": 4, "ano": 2026, "pago": false, "dataPagto": null}], "c041": [{"id": "d1780429708974", "desc": "Mensalidade Junho 2026", "valor": 339, "mes": 4, "ano": 2026, "pago": false, "dataPagto": null}], "c023": [{"id": "d1780429736801", "desc": "Mensalidade Junho 2026", "valor": 180, "mes": 4, "ano": 2026, "pago": false, "dataPagto": null}]});
+S.debts=LS.load('debts',{"c004": [{"id": "d1780429147106", "ano": 2026, "mes": 4, "desc": "Mensalidade Junho 2026", "pago": false, "valor": 150, "dataPagto": null}], "c021": [], "c023": [{"id": "d1780429736801", "ano": 2026, "mes": 4, "desc": "Mensalidade Junho 2026", "pago": false, "valor": 180, "dataPagto": null}], "c041": [{"id": "d1780429708974", "ano": 2026, "mes": 4, "desc": "Mensalidade Junho 2026", "pago": false, "valor": 339, "dataPagto": null}], "c009": [{"id": "d1780678586585", "desc": "Mensalidade Maio 2026", "valor": 150, "mes": 4, "ano": 2026, "pago": false, "dataPagto": null}], "c016": [{"id": "d1780678464855", "desc": "Mensalidade Maio 2026", "valor": 150, "mes": 4, "ano": 2026, "pago": false, "dataPagto": null}]});
 if(!LS.load('st_seeded',false)){const ex=LS.load('statuses',{});const defs={"xmlResetCheck_2026_5": true, "c003_xml_2026_5": {"sent": true, "date": "03/06/2026 13:18"}, "c009_xml_2026_5": {"sent": true, "date": "03/06/2026 13:18"}, "c018_xml_2026_5": {"sent": true, "date": "03/06/2026 13:18"}, "c019_xml_2026_5": {"sent": true, "date": "03/06/2026 13:18"}, "c020_xml_2026_5": {"sent": true, "date": "03/06/2026 13:18"}, "c026_xml_2026_5": {"sent": true, "date": "03/06/2026 13:18"}, "c024_xml_2026_5": {"sent": true, "date": "03/06/2026 13:20"}, "c008_xml_2026_5": {"sent": true, "date": "03/06/2026 13:35"}};Object.keys(defs).forEach(k=>{if(ex[k]===undefined)ex[k]=defs[k];});LS.save('statuses',ex);LS.save('st_seeded',true);}
 
 // Init clients — migrate if needed
@@ -317,10 +326,34 @@ if(!LS.load('st_seeded',false)){const ex=LS.load('statuses',{});const defs={"xml
   }
 })();
 
+// Inject cert sent records
+(function(){
+  var cs=LS.load('statuses',{});
+  var certSent={"c012_cert_sent": "05/06/2026 12:05", "c015_cert_sent": "05/06/2026 12:06", "c030_cert_sent": "05/06/2026 15:21", "c033_cert_sent": "05/06/2026 13:11", "c041_cert_sent": "05/06/2026 13:45"};
+  Object.keys(certSent).forEach(function(k){if(!cs[k])cs[k]=certSent[k];});
+  LS.save('statuses',cs);
+})();
+// Corrigir pastas sem barras no localStorage (migração de dados antigos)
+(function(){
+  let changed=false;
+  S.clients=S.clients.map(c=>{
+    if(!c.pasta)return c;
+    // Se pasta não tem barras mas tem padrões de caminho Windows, corrigir
+    // Comparar com INITIAL para restaurar barras corretas
+    const ini=INITIAL.find(x=>x.id===c.id);
+    if(ini&&ini.pasta&&ini.pasta.includes('\\')&&c.pasta&&!c.pasta.includes('\\')&&!c.pasta.includes('/')){
+      changed=true;
+      return {...c,pasta:ini.pasta};
+    }
+    return c;
+  });
+  if(changed){save();console.log('[PASTA] Caminhos corrigidos do INITIAL');}
+})();
+
 function save(){
   LS.save('clients',S.clients);LS.save('nextSeq',S.nextSeq);
   LS.save('statuses',S.statuses);LS.save('lancamentos',S.lancamentos);
-  LS.save('clientLogos',S.clientLogos);LS.save('notifEnabled',S.notifEnabled);
+  LS.save('clientLogos',S.clientLogos);LS.save('clientLogoBg',S.clientLogoBg);LS.save('notifEnabled',S.notifEnabled);LS.save('notifConfig',S.notifConfig);
   LS.save('driveClientId',S.driveClientId);LS.save('driveFileId',S.driveFileId);
   LS.save('debts',S.debts);
   // Flash save indicator
@@ -331,14 +364,39 @@ function save(){
 
 // HELPERS
 function brl(n){return 'R$ '+Number(n).toFixed(2).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+function toTitleCase(str){if(!str)return '';return str.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());}
 function isBD(d){const w=d.getDay();if(w===0||w===6)return false;const k=String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0');return!FERIADOS.includes(k);}
 function billingDate(y,m){let d=new Date(y,m,BD);while(!isBD(d))d.setDate(d.getDate()-1);return d;}
 function addBizDays(d,n){let r=new Date(d);let c=0;while(c<Math.abs(n)){r.setDate(r.getDate()+(n>0?1:-1));if(isBD(r))c++;}return r;}
 function nthBizDayOfMonth(y,m,n){let d=new Date(y,m,1);let c=0;while(c<n){if(isBD(d)){c++;if(c===n)break;}d.setDate(d.getDate()+1);}return d;}
-function stCls(s){return{pendente:'s-p',enviado:'s-e',pago:'s-ok',atraso:'s-at'}[s]||'s-p';}
+function stCls(s){return{pendente:'s-p',enviado:'s-e',pago:'s-ok',atraso:'s-at'}[s||'pendente']||'s-p';}
 function stKey(id){return id+'-'+S.bYear+'-'+S.bMonth;}
 function getSt(id){return S.statuses[stKey(id)]||'pendente';}
-function setSt(id,v){S.statuses[stKey(id)]=v;save();render();}
+function setSt(id,v){
+  const prev=getSt(id);
+  S.statuses[stKey(id)]=v;
+  // Quando marca como pago pela primeira vez, lança no financeiro
+  if(v==='pago'&&prev!=='pago'){
+    const c=S.clients.find(x=>x.id===id);
+    if(c){
+      const valorReal=c.cobranca==='PIX_SEMESTRAL'?c.valor*6:c.valor;
+      const mes=MESES[S.bMonth];
+      const ano=S.bYear;
+      const desc=`Mensalidade ${mes}/${ano} — ${toTitleCase(c.nome.split(' ')[0])}`;
+      addLancamento('RECEITA_CLIENTE',desc,valorReal,id,new Date().toLocaleDateString('pt-BR'),'auto_billing');
+      showToast('✓ Pagamento registrado','Lançado no financeiro de '+mes+'.','var(--grn)');
+    }
+  }
+  // Se desmarcar como pago, remove o lançamento automático deste mês
+  if(v!=='pago'&&prev==='pago'){
+    const c=S.clients.find(x=>x.id===id);
+    if(c){
+      const mes=S.bMonth;const ano=S.bYear;
+      S.lancamentos=S.lancamentos.filter(l=>!(l.clientId===id&&l.mes===mes&&l.ano===ano&&l.origem==='auto_billing'));
+    }
+  }
+  save();render();
+}
 function cobTag(c){const m={PIX_MENSAL:'t-pm',PIX_SEMESTRAL:'t-ps',BOLETO:'t-bo',SEM_COBRANCA:'t-sc'};return`<span class="tag ${m[c]}">${COBLBL[c]}</span>`;}
 function sistImg(s){const k={DATACAIXA:'datacaixa',STI3:'sti3',VELO:'velo',PEDIZAP:'pedizap'}[s];return k&&LOGOS[k]?`<div class="si"><img src="${LOGOS[k]}" alt="${s}"></div>`:'';}
 function automazeFee(c){return c.valor-Object.values(c.valores_sistemas||{}).reduce((a,b)=>a+Number(b),0);}
@@ -385,6 +443,63 @@ function certStatus(dtStr){
 }
 
 // NOTIFICATIONS
+async function openNotifCenter(){
+  const cfg=S.notifConfig||{};
+  const tipos=[
+    {key:'billing', icon:'🔔', label:'Cobrança PIX', desc:'3 dias úteis antes do vencimento'},
+    {key:'cert',    icon:'📋', label:'Certificados', desc:'Avisa 1x por faixa: 30, 20 e 10 dias antes do vencimento. Para após envio do WhatsApp.'},
+    {key:'xml',     icon:'📤', label:'Envio de XML', desc:'1º e 5º dia útil do mês'},
+    {key:'syspay',  icon:'💳', label:'Pagamentos sistemas', desc:'No dia do vencimento'},
+    {key:'boleto',  icon:'📄', label:'Boletos semestrais', desc:'10 dias úteis antes de Jan e Jul'},
+    {key:'simples', icon:'🏛️', label:'Simples Nacional', desc:'Dia 10 de cada mês'},
+  ];
+  const rows=tipos.map(t=>{
+    const on=cfg[t.key]!==false;
+    return `<div style="display:flex;align-items:center;gap:12px;padding:10px 13px;border-bottom:1px solid var(--brd);">
+      <span style="font-size:18px;">${t.icon}</span>
+      <div style="flex:1;">
+        <div style="font-size:12px;font-weight:600;color:var(--txt);">${t.label}</div>
+        <div style="font-size:10px;color:var(--mut);">${t.desc}</div>
+      </div>
+      <label style="position:relative;display:inline-block;width:38px;height:22px;cursor:pointer;">
+        <input type="checkbox" ${on?'checked':''} style="opacity:0;width:0;height:0;"
+          onchange="S.notifConfig['${t.key}']=this.checked;LS.save('notifConfig',S.notifConfig);">
+        <span style="position:absolute;inset:0;background:${on?'var(--blue)':'var(--brd)'};border-radius:11px;transition:.2s;">
+          <span style="position:absolute;width:16px;height:16px;background:#fff;border-radius:50%;top:3px;left:${on?'19':'3'}px;transition:.2s;"></span>
+        </span>
+      </label>
+    </div>`;
+  }).join('');
+
+  document.body.insertAdjacentHTML('beforeend',`<div class="ov" id="notif-center-ov" onclick="if(event.target.id==='notif-center-ov')this.remove()">
+    <div class="modal" style="max-width:420px;">
+      <div class="mhdr">
+        <div class="mtit">🔔 Central de Notificações</div>
+        <button class="btn btn-g btn-sm" onclick="document.getElementById('notif-center-ov').remove()">✕</button>
+      </div>
+      <div class="mbdy" style="padding:0;gap:0;">
+        <div style="padding:10px 13px;background:var(--pale);border-bottom:1px solid var(--brd);">
+          <div style="font-size:11px;color:var(--mut);line-height:1.6;">
+            Notificações disparam às <b>9h, 14h e 19h</b>.<br>
+            Certificados: uma vez por faixa (30, 20 e 10 dias).<br>
+            Após enviar WhatsApp para o cliente, a notificação do certificado fica silenciada por 30 dias.
+          </div>
+        </div>
+        <div style="border:1px solid var(--brd);border-radius:8px;margin:12px;overflow:hidden;">${rows}</div>
+        <div style="padding:0 12px 4px;">
+          ${S.notifEnabled
+            ?'<div style="font-size:10px;color:var(--grn);padding:4px 0;">✓ Notificações ativas</div>'
+            :'<div style="font-size:10px;color:var(--mut);padding:4px 0;">⚠️ Notificações desativadas — clique em 🔕 no cabeçalho para ativar</div>'
+          }
+        </div>
+      </div>
+      <div class="mftr">
+        <button class="btn btn-g" onclick="document.getElementById('notif-center-ov').remove()">Fechar</button>
+      </div>
+    </div>
+  </div>`);
+}
+
 async function requestNotif(){
   if(!('Notification' in window)){alert('Navegador sem suporte a notificações.');return;}
   const p=await Notification.requestPermission();
@@ -392,39 +507,90 @@ async function requestNotif(){
   if(S.notifEnabled)checkNotif();
 }
 function notify(t,b,tag){
-  if(!S.notifEnabled||Notification.permission!=='granted')return;
-  new Notification(t,{body:b,icon:LOGOS.automaze,tag:tag||t});
+  if(!S.notifEnabled)return;
+  // Só dispara nos horários 9h, 14h e 19h (janela de 59 minutos)
+  const now=new Date();
+  const h=now.getHours();
+  const isWindow=(h===9||h===14||h===19);
+  if(!isWindow)return;
+  // Dedup: cada tag dispara uma vez por janela de horário por dia
+  const today=now.toISOString().slice(0,10);
+  const nkey='notif_'+tag+'_'+today+'_'+h;
+  if(LS.load(nkey,false))return;
+  LS.save(nkey,true);
+  // Enviar
+  if(window.electronAPI){window.electronAPI.showNotification(t,b);return;}
+  if(Notification.permission==='granted'){
+    new Notification(t,{body:b,icon:LOGOS.automaze,tag:tag||t});
+  }else if(Notification.permission!=='denied'){
+    Notification.requestPermission().then(p=>{if(p==='granted')new Notification(t,{body:b,tag:tag||t});});
+  }
 }
 function checkNotif(){
-  const h=new Date(),d=h.getDate(),m=h.getMonth(),y=h.getFullYear();
-  const bd=billingDate(y,m);
-  // Billing: 3 biz days before
-  const alerta=addBizDays(bd,-3);
-  if(d===alerta.getDate()&&m===alerta.getMonth())
-    notify('🔔 Cobranças em 3 dias úteis',`Prepare as mensagens PIX para o dia ${bd.toLocaleDateString('pt-BR')}.`,'billing');
-  // System payments
-  SYSPAY.forEach(sp=>{if(d===sp.dia)notify(`💳 ${sp.nome} vence hoje`,`Pague o ${sp.nome} (dia ${sp.dia}).`,sp.nome);});
-  // Certs
-  S.clients.filter(c=>c.ativo&&c.certVenc).forEach(c=>{
-    const cs=certStatus(c.certVenc);
-    if(cs&&cs.dias>=0&&cs.dias<=30)notify('📋 Certificado vencendo',`${c.nome}: ${cs.txt}.`,c.id+'_cert');
-  });
-  // Semi-annual boletos: 10 business days before Jan/Jul
-  // January: alert in December around 15th
-  // July: alert in June around 15th
-  const jan10=new Date(y,11,1);let jan10bd=new Date(jan10);
-  for(let i=0;i<20;i++){jan10bd=addBizDays(new Date(y+1,0,1),-10+i);if(jan10bd.getMonth()===11)break;}
-  const jul10bd=addBizDays(new Date(y,6,1),-10);
-  if(m===11&&d===jan10bd.getDate())notify('📄 Boletos semestrais em breve','Gere os 6 boletos de Janeiro para clientes Boleto. Vence em Janeiro!','sem_jan');
-  if(m===5&&d===jul10bd.getDate())notify('📄 Boletos semestrais em breve','Gere os 6 boletos de Julho para clientes Boleto. Vence em Julho!','sem_jul');
-  // XML: 1st and 5th biz day
-  const bd1=nthBizDayOfMonth(y,m,1);
-  const bd5=nthBizDayOfMonth(y,m,5);
-  const xmlKey=`xml_notif_${y}_${m}`;
-  if((d===bd1.getDate()||d===bd5.getDate())&&!S.statuses[xmlKey]){
-    const manual=S.clients.filter(c=>c.ativo&&c.xmlEnvio==='MANUAL');
-    if(manual.length){
-      notify('📤 Envio de XML ao contador',`${manual.length} cliente(s) com XML manual para enviar.`,'xml');
+  if(!S.notifEnabled)return;
+  const now=new Date(),d=now.getDate(),m=now.getMonth(),y=now.getFullYear();
+  const cfg=S.notifConfig||{};
+
+  // COBRANÇA PIX — 3 dias úteis antes
+  if(cfg.billing!==false){
+    const bd=billingDate(y,m);
+    const alerta=addBizDays(bd,-3);
+    if(d===alerta.getDate()&&m===alerta.getMonth())
+      notify('🔔 Cobranças em 3 dias úteis',`Prepare as mensagens PIX para o dia ${bd.toLocaleDateString('pt-BR')}.`,'billing_'+y+'_'+m);
+  }
+
+  // PAGAMENTOS DE SISTEMAS — no dia do vencimento
+  if(cfg.syspay!==false){
+    SYSPAY.forEach(sp=>{
+      if(d===sp.dia)notify(`💳 ${sp.nome} vence hoje`,`Pague o ${sp.nome} (dia ${sp.dia}).`,'syspay_'+sp.nome+'_'+y+'_'+m);
+    });
+  }
+
+  // CERTIFICADOS — faixas 30, 20 e 10 dias (uma notificação por faixa)
+  if(cfg.cert!==false){
+    S.clients.filter(c=>c.ativo&&c.certVenc).forEach(c=>{
+      const cs=certStatus(c.certVenc);
+      if(!cs||cs.dias<0||cs.dias>30)return;
+      const silencedUntil=LS.load(c.id+'_cert_silenced',0);
+      if(Date.now()<silencedUntil)return;
+      // Definir faixa: 10, 20 ou 30 dias
+      const faixa=cs.dias<=10?'10':cs.dias<=20?'20':'30';
+      notify('📋 Certificado vencendo',`${toTitleCase(c.nome)}: vence em ${cs.dias} dia(s).`,c.id+'_cert_f'+faixa);
+    });
+  }
+
+  // BOLETOS SEMESTRAIS — 10 dias úteis antes de Jan/Jul
+  if(cfg.boleto!==false){
+    const jan10bd=addBizDays(new Date(y+1,0,1),-10);
+    const jul10bd=addBizDays(new Date(y,6,1),-10);
+    if(m===11&&d===jan10bd.getDate())
+      notify('📄 Boletos semestrais','Gere os boletos de Janeiro para clientes Boleto.','sem_jan_'+y);
+    if(m===5&&d===jul10bd.getDate())
+      notify('📄 Boletos semestrais','Gere os boletos de Julho para clientes Boleto.','sem_jul_'+y);
+  }
+
+  // ENVIO XML — 1º e 5º dia útil
+  if(cfg.xml!==false){
+    const bd1=nthBizDayOfMonth(y,m,1);
+    const bd5=nthBizDayOfMonth(y,m,5);
+    if(d===bd1.getDate()||d===bd5.getDate()){
+      const manual=S.clients.filter(c=>c.ativo&&c.xmlEnvio==='MANUAL');
+      if(manual.length)
+        notify('📤 Envio de XML ao contador',`${manual.length} cliente(s) com XML manual para enviar.`,'xml_'+y+'_'+m+'_'+d);
+    }
+  }
+
+  // SIMPLES NACIONAL — dia 10
+  if(cfg.simples!==false){
+    if(d===10)
+      notify('🏛️ Portal Simples Nacional','Hoje é dia 10 — envie o faturamento mensal no portal Simples Nacional.','simples_'+y+'_'+m);
+  }
+  // TEAMVIEWER — lançamento automático dia 15
+  if(d===15){
+    const tvKey='tv_auto_'+y+'_'+m;
+    if(!LS.load(tvKey,false)){
+      addLancamento('DESPESA','TeamViewer (automático)',129,'',new Date().toLocaleDateString('pt-BR'));
+      LS.save(tvKey,true);
     }
   }
 }
@@ -481,7 +647,7 @@ function saveSupabaseConfig(){
 async function syncToCloud(){
   const {url,key}=getSupabase();
   if(!url||!key){openSupabaseConfig();return;}
-  const payload={clients:S.clients,statuses:S.statuses,lancamentos:S.lancamentos,nextSeq:S.nextSeq,debts:S.debts,savedAt:new Date().toISOString()};
+  const payload={clients:S.clients,statuses:S.statuses,lancamentos:S.lancamentos,nextSeq:S.nextSeq,debts:S.debts,clientLogoBg:S.clientLogoBg,savedAt:new Date().toISOString()};
   try{
     const r=await fetch(url+'/rest/v1/automaze_data',{
       method:'POST',
@@ -522,6 +688,7 @@ async function loadFromCloud(){
       if(d.lancamentos)S.lancamentos=d.lancamentos;
       if(d.nextSeq)S.nextSeq=d.nextSeq;
       if(d.debts)S.debts=d.debts;
+      if(d.clientLogoBg)S.clientLogoBg=d.clientLogoBg;
       save();render();
       showToast('✓ Dados carregados!','Sincronizado com sucesso.','var(--grn)');
     }
@@ -556,33 +723,73 @@ function addDebt(clientId,desc,valor,mes,ano){
   });
   save();render();
 }
-function payDebt(clientId,debtId,ev,skipConfirm){
+function payDebt(clientId,debtId,ev,registerFinanceiro){
+  // registerFinanceiro=true → lança no financeiro; false → só marca como pago
   if(ev)ev.stopPropagation();
   const debt=(S.debts[clientId]||[]).find(x=>x.id===debtId);
   if(!debt)return;
   const c=S.clients.find(x=>x.id===clientId);
-  if(!skipConfirm&&!confirm(`Confirmar recebimento de ${brl(debt.valor)} de ${c?c.nome:'cliente'}?\n\nUm lançamento será criado no financeiro.`))return;
   const now=new Date();
   debt.pago=true;
   debt.dataPagto=now.toLocaleDateString('pt-BR');
-  // Criar lançamento financeiro automaticamente
-  const lanc={
-    id:'l'+Date.now(),
-    tipo:'receita',
-    desc:debt.desc+(c?' — '+(c.nome.split(' ')[0]):''),
-    valor:debt.valor,
-    data:now.toLocaleDateString('pt-BR'),
-    mes:now.getMonth(),
-    ano:now.getFullYear(),
-    clientId,
-    origem:'debito',
-    debtId
-  };
-  if(!S.lancamentos)S.lancamentos=[];
-  S.lancamentos.push(lanc);
+  if(registerFinanceiro!==false){
+    const lanc={
+      id:'l'+Date.now(),
+      tipo:'RECEITA_CLIENTE',
+      desc:debt.desc+(c?' — '+toTitleCase(c.nome.split(' ')[0]):''),
+      valor:debt.valor,
+      data:now.toLocaleDateString('pt-BR'),
+      mes:now.getMonth(),
+      ano:now.getFullYear(),
+      clientId,
+      origem:'debito',
+      debtId
+    };
+    if(!S.lancamentos)S.lancamentos=[];
+    S.lancamentos.push(lanc);
+  }
   save();render();
   if(ev)celebrate(ev.clientX,ev.clientY);
-  showToast('✓ Pagamento registrado!',`${brl(debt.valor)} lançado no financeiro de ${MESES[now.getMonth()]}.`,'var(--grn)');
+  const msg=registerFinanceiro!==false
+    ?`${brl(debt.valor)} lançado no financeiro de ${MESES[now.getMonth()]}.`
+    :'Marcado como recebido (sem lançamento).';
+  showToast('✓ Recebimento registrado!',msg,'var(--grn)');
+}
+function payDebtFromModal(clientId,debtId,ev){
+  if(ev)ev.stopPropagation();
+  const debt=(S.debts[clientId]||[]).find(x=>x.id===debtId);
+  if(!debt)return;
+  const c=S.clients.find(x=>x.id===clientId);
+  // Show inline choice in the modal instead of confirm dialog
+  document.getElementById('debt-ov')?.remove();
+  // Show custom dialog
+  const ov=document.createElement('div');
+  ov.className='ov';ov.id='pay-choice-ov';
+  ov.innerHTML=`<div class="modal" style="max-width:380px;">
+    <div class="mhdr"><div class="mtit">💳 Confirmar recebimento</div></div>
+    <div class="mbdy" style="gap:10px;">
+      <div style="font-size:13px;color:var(--txt);line-height:1.6;">
+        <b>${c?toTitleCase(c.nome):clientId}</b><br>
+        <span style="font-family:var(--fn);font-size:20px;font-weight:700;color:var(--grn);">${brl(debt.valor)}</span>
+        <span style="font-size:11px;color:var(--mut);margin-left:6px;">${debt.desc}</span>
+      </div>
+      <div style="background:var(--pale);border-radius:8px;padding:10px 13px;font-size:12px;color:var(--mid);">
+        Como deseja registrar?
+      </div>
+    </div>
+    <div class="mftr" style="flex-direction:column;gap:8px;">
+      <button class="btn btn-p" style="width:100%;" onclick="document.getElementById('pay-choice-ov').remove();payDebt('${clientId}','${debtId}',null,true);openDebtModal('${clientId}')">
+        ✓ Recebido — registrar no financeiro
+      </button>
+      <button class="btn btn-g" style="width:100%;" onclick="document.getElementById('pay-choice-ov').remove();payDebt('${clientId}','${debtId}',null,false);openDebtModal('${clientId}')">
+        ✓ Recebido — só marcar (já registrei manualmente)
+      </button>
+      <button class="btn" style="width:100%;background:var(--redl);color:var(--red);border:1px solid #f5b0b0;" onclick="document.getElementById('pay-choice-ov').remove();openDebtModal('${clientId}')">
+        Cancelar
+      </button>
+    </div>
+  </div>`;
+  document.body.appendChild(ov);
 }
 function removeDebt(clientId,debtId,ev){
   if(ev)ev.stopPropagation();
@@ -614,11 +821,13 @@ function openDebtModal(clientId,ev){
           ${debts.map(d=>`<div style="padding:8px 12px;border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:8px;background:${d.pago?'var(--grnl)':'var(--wh)'};">
             <div style="flex:1;">
               <div style="font-size:12px;font-weight:600;color:${d.pago?'var(--grn)':'var(--txt)'};">${d.desc}</div>
-              <div style="font-size:10px;color:var(--mut);">${MESES[d.mes]} ${d.ano}${d.pago?' · Pago em '+d.dataPagto:''}</div>
+              <div style="font-size:10px;color:var(--mut);">${MESES[d.mes]} ${d.ano}${d.pago?' · Recebido em '+d.dataPagto:''}</div>
             </div>
             <span style="font-family:var(--fn);font-size:14px;font-weight:700;color:${d.pago?'var(--grn)':'var(--red)'};">${brl(d.valor)}</span>
-            ${!d.pago?`<button class="btn btn-grn btn-sm" onclick="payDebt('${clientId}','${d.id}',event)">✓ Pago</button>`:`<span style="font-size:10px;color:var(--grn);">✓</span>`}
-            <button class="btn btn-g btn-sm" onclick="removeDebt('${clientId}','${d.id}',event)" style="padding:3px 6px;font-size:11px;">✕</button>
+            ${!d.pago?`
+              <button class="btn btn-grn btn-sm" style="white-space:nowrap;" onclick="payDebtFromModal('${clientId}','${d.id}',event)">✓ Recebido</button>
+              <button class="btn btn-sm" style="background:var(--redl);color:var(--red);border:1px solid #f5b0b0;padding:3px 7px;font-size:10px;" onclick="removeDebt('${clientId}','${d.id}',event)" title="Apagar sem registrar pagamento">🗑</button>
+            `:`<span style="font-size:10px;color:var(--grn);">✓ Recebido</span>`}
           </div>`).join('')}
         </div>`:''}
         <div style="border:1px solid var(--brd);border-radius:8px;padding:11px 13px;background:var(--pale);">
@@ -629,9 +838,9 @@ function openDebtModal(clientId,ev){
             <div class="fg"><label class="flbl">Valor (R$)</label>
               <input class="fin" id="debt-valor" type="number" value="${c.valor}" step="0.01"></div>
             <div class="fg"><label class="flbl">Mês</label>
-              <select class="fsel" id="debt-mes">${mesOpts}</select></div>
+              <select class="fsel" id="debt-mes" onchange="(function(){const m=document.getElementById('debt-mes').value;const a=document.getElementById('debt-ano').value;const d=document.getElementById('debt-desc');if(d&&d.value.startsWith('Mensalidade'))d.value='Mensalidade '+['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'][m]+' '+a;})()">${mesOpts}</select></div>
             <div class="fg"><label class="flbl">Ano</label>
-              <select class="fsel" id="debt-ano">${anoOpts}</select></div>
+              <select class="fsel" id="debt-ano" onchange="(function(){const m=document.getElementById('debt-mes').value;const a=document.getElementById('debt-ano').value;const d=document.getElementById('debt-desc');if(d&&d.value.startsWith('Mensalidade'))d.value='Mensalidade '+['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'][m]+' '+a;})()">${anoOpts}</select></div>
           </div>
           <button class="btn btn-p btn-sm" style="margin-top:9px;" onclick="
             const desc=document.getElementById('debt-desc').value.trim();
@@ -669,6 +878,16 @@ function diasAtraso(){
 }
 
 // WHATSAPP
+// Central WhatsApp opener — uses Electron shell or browser fallback
+function openWpp(phone, msg){
+  const webUrl=`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  if(window.electronAPI&&window.electronAPI.openExternal){
+    // Fire and forget — no .catch needed
+    window.electronAPI.openExternal(webUrl);
+  }else{
+    window.open(webUrl,'_blank');
+  }
+}
 function sendWpp(id){
   const c=S.clients.find(x=>x.id===id);
   if(!c?.wpp){alert('WhatsApp não cadastrado.');return;}
@@ -682,7 +901,7 @@ function sendWpp(id){
   if(window.electronAPI&&window.electronAPI.openExternal){
     window.electronAPI.openExternal(wppUrl);
   }else{
-    window.open(wppUrl,'_blank');
+    (window.electronAPI?window.electronAPI.openExternal(wppUrl):window.open(wppUrl,'_blank'));
   }
   setSt(id,'enviado');
 }
@@ -697,8 +916,13 @@ function sendCertWpp(id){
   if(window.electronAPI&&window.electronAPI.openExternal){
     window.electronAPI.openExternal(certUrl);
   }else{
-    window.open(certUrl,'_blank');
+    (window.electronAPI?window.electronAPI.openExternal(certUrl):window.open(certUrl,'_blank'));
   }
+  // Silenciar notificação por 30 dias após envio
+  const silenceKey=id+'_cert_silenced';
+  const silenceUntil=Date.now()+(30*24*60*60*1000);
+  LS.save(silenceKey, silenceUntil);
+  showToast('📲 Aviso enviado','Notificação silenciada por 30 dias.','var(--blue)');
 }
 function sendAtraso(id,ap){
   const c=S.clients.find(x=>x.id===id);if(!c?.wpp){alert('WhatsApp não cadastrado.');return;}
@@ -709,7 +933,8 @@ function sendAtraso(id,ap){
   if(ap&&dias>0)msg+=`\n\nValor original: ${brl(c.valor)}\nDias em atraso: ${dias}\nMulta (2%): ${brl(calc.multa)}\nJuros: ${brl(calc.juros)}\n\n💰 Total: *${brl(calc.total)}*`;
   else msg+=`\n\n💰 Valor: *${brl(c.valor)}*`;
   msg+=`\n\nChave PIX: ${PIX_KEY}`;
-  window.open(`https://wa.me/${full}?text=${encodeURIComponent(msg)}`,'_blank');
+  const wppFinalUrl=`https://wa.me/${full}?text=${encodeURIComponent(msg)}`;
+  if(window.electronAPI){window.electronAPI.openExternal(wppFinalUrl);}else{window.open(wppFinalUrl,'_blank');}
   setSt(id,'enviado');
 }
 function openAtrasoModal(id){
@@ -769,15 +994,23 @@ function toggleXml(id,ev){
 }
 
 // LANCAMENTOS
-function addLancamento(tipo,desc,valor,clientId,data){
+function addLancamento(tipo,desc,valor,clientId,data,origem){
   const dt=data||new Date().toLocaleDateString('pt-BR');
   const parts=dt.split('/').map(Number);
   const l={id:'l'+Date.now(),tipo,desc,valor:parseFloat(valor)||0,clientId:clientId||'',data:dt,
-    ano:parts[2]||new Date().getFullYear(),mes:(parts[1]||new Date().getMonth()+1)-1};
+    ano:parts[2]||new Date().getFullYear(),mes:(parts[1]||new Date().getMonth()+1)-1,origem:origem||''};
   S.lancamentos.push(l);save();render();
 }
 function removeLancamento(id){S.lancamentos=S.lancamentos.filter(l=>l.id!==id);save();render();}
-function getLancsMes(y,m){return S.lancamentos.filter(l=>l.ano===y&&l.mes===m);}
+function getLancsMes(y,m){
+  return S.lancamentos
+    .filter(l=>l.ano===y&&l.mes===m)
+    .sort((a,b)=>{
+      // Ordenar por data DD/MM/AAAA
+      const parseD=s=>{if(!s)return 0;const p=s.split('/');return new Date(p[2],p[1]-1,p[0]).getTime();};
+      return parseD(a.data)-parseD(b.data);
+    });
+}
 
 // EXPORT/IMPORT
 function exportData(){
@@ -814,36 +1047,41 @@ function uploadClientLogo(id,ev){
 }
 
 // FOLDER
-function openFolder(pasta,ev){
+function openFolder(clientId,ev){
   if(ev)ev.stopPropagation();
+  // Buscar caminho pelo id — nunca passa pelo HTML para não perder barras
+  const c=S.clients.find(x=>x.id===clientId);
+  const pasta=c?c.pasta:'';
   if(!pasta){
-    alert('Nenhuma pasta configurada para este cliente.\nEdite o cliente e informe o caminho da pasta.\nEx: C:\\Users\\Paulo Henrique\\Desktop\\Clientes\\NOME');
+    alert('Nenhuma pasta configurada.\nEdite o cliente e informe o caminho da pasta.');
     return;
   }
-  const path=pasta.trim();
-  // Copy to clipboard
-  if(navigator.clipboard){navigator.clipboard.writeText(path).catch(()=>{});}
-  // Use hidden folder picker — browser opens file dialog, user navigates to the right folder
-  let picker=document.getElementById('_folder_picker');
-  if(!picker){
-    picker=document.createElement('input');
-    picker.type='file';picker.id='_folder_picker';
-    picker.setAttribute('webkitdirectory','');picker.setAttribute('directory','');
-    picker.style.cssText='position:fixed;opacity:0;pointer-events:none;top:0;left:0;';
-    document.body.appendChild(picker);
-    picker.addEventListener('change',function(){
-      if(this.files&&this.files.length){
-        showToast('📁 Pasta aberta','Arquivos carregados do Explorer.','var(--blue)');
-      }
-      this.value='';
-    });
+  if(!window.electronAPI){
+    alert('Abertura de pasta local disponível apenas no app instalado.');
+    return;
   }
-  picker.click();
-  // Show path toast
-  showToast('📁 '+path,'Caminho copiado ✓ — Navegue até esta pasta no seletor.','var(--blue)');
+  window.electronAPI.openFolder(pasta).then(res=>{
+    if(res.success) return;
+    if(res.notFound){
+      if(confirm('Pasta não encontrada:\n'+res.path+'\n\nDeseja criar a pasta agora?')){
+        window.electronAPI.createAndOpenFolder(pasta);
+      }
+    }else{
+      alert('Erro: '+(res.error||'desconhecido'));
+    }
+  });
 }
 
 // MÁSCARAS
+function maskCnpj(v){
+  v=v.replace(/\D/g,'');
+  if(v.length>14)v=v.slice(0,14);
+  if(v.length>12)return v.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{0,2})$/,'$1.$2.$3/$4-$5');
+  if(v.length>8)return v.replace(/^(\d{2})(\d{3})(\d{3})(\d{0,4})$/,'$1.$2.$3/$4');
+  if(v.length>5)return v.replace(/^(\d{2})(\d{3})(\d{0,3})$/,'$1.$2.$3');
+  if(v.length>2)return v.replace(/^(\d{2})(\d+)$/,'$1.$2');
+  return v;
+}
 function maskPhone(v){
   v=v.replace(/\D/g,'');
   if(v.length>11)v=v.slice(0,11);
@@ -864,13 +1102,15 @@ function applyMask(el,type){
   el.addEventListener('input',function(){
     const pos=this.selectionStart;
     const old=this.value;
-    this.value=type==='phone'?maskPhone(this.value):maskDate(this.value);
+    const fmtV=(v)=>type==='phone'?maskPhone(v):type==='cnpj'?maskCnpj(v):maskDate(v);
+    this.value=fmtV(this.value);
     // Adjust cursor
     const diff=this.value.length-old.length;
     this.setSelectionRange(pos+diff,pos+diff);
   });
   el.addEventListener('blur',function(){
-    this.value=type==='phone'?maskPhone(this.value):maskDate(this.value);
+    const fmtV=(v)=>type==='phone'?maskPhone(v):type==='cnpj'?maskCnpj(v):maskDate(v);
+    this.value=fmtV(this.value);
   });
 }
 
@@ -904,14 +1144,27 @@ function filtered(){
 function openAdd(){
   S.editing={id:'',seq:S.nextSeq,nome:'',responsaveis:[],wpp:'',email:'',cnpj:'',sistemas:['DATACAIXA'],valores_sistemas:{DATACAIXA:49},valor:150,cobranca:'PIX_MENSAL',inicio:'',ativo:true,obs:'',certVenc:'',xmlEnvio:'NAO_ENVIA',pasta:''};
   S.modal='add';render();
-  setTimeout(()=>{applyMask(document.getElementById('fw'),'phone');applyMask(document.getElementById('fi'),'date');applyMask(document.getElementById('fce'),'date');},60);
+  setTimeout(()=>{
+    applyMask(document.getElementById('fw'),'phone');
+    applyMask(document.getElementById('fi'),'date');
+    applyMask(document.getElementById('fce'),'date');
+    applyMask(document.getElementById('fcnpj'),'cnpj');
+  },60);
 }
 function openEdit(id,ev){
   if(ev)ev.stopPropagation();
   const c=S.clients.find(x=>x.id===id);if(!c)return;
   S.editing={...c,sistemas:[...c.sistemas],valores_sistemas:{...c.valores_sistemas}};
   S.modal='edit';render();
-  setTimeout(()=>{applyMask(document.getElementById('fw'),'phone');applyMask(document.getElementById('fi'),'date');applyMask(document.getElementById('fce'),'date');},60);
+  setTimeout(()=>{
+    applyMask(document.getElementById('fw'),'phone');
+    applyMask(document.getElementById('fi'),'date');
+    applyMask(document.getElementById('fce'),'date');
+    applyMask(document.getElementById('fcnpj'),'cnpj');
+    // Set pasta value via JS to preserve backslashes
+    const fp=document.getElementById('fpasta');
+    if(fp&&S.editing&&S.editing.pasta)fp.value=S.editing.pasta;
+  },60);
 }
 function closeModal(){S.modal=null;S.editing=null;render();}
 
@@ -924,7 +1177,12 @@ function collectAndSave(){
   e.wpp=get('fw').trim();e.email=get('fe').trim();e.cnpj=get('fc').trim();
   e.valor=parseFloat(get('fv'))||0;e.cobranca=get('fcob');
   e.inicio=get('fi').trim();e.certVenc=get('fce').trim();
-  e.xmlEnvio=get('fxml');e.pasta=get('fpasta').trim();e.obs=get('fo').trim();
+  e.xmlEnvio=get('fxml');e.obs=get('fo').trim();
+  // Se certVenc mudou, limpar registro de envio (certificado foi renovado)
+  const oldClient=S.clients.find(x=>x.id===e.id);
+  if(oldClient&&oldClient.certVenc&&e.certVenc&&oldClient.certVenc!==e.certVenc){
+    delete S.statuses[e.id+'_cert_sent'];
+  }
   const sists=['DATACAIXA','STI3','VELO','PEDIZAP'];
   e.sistemas=sists.filter(s=>document.getElementById('sch-'+s)?.checked);
   e.valores_sistemas={};
@@ -971,7 +1229,7 @@ function render(){
   const bd=billingDate(new Date().getFullYear(),new Date().getMonth());
   const t=new Date();const isTd=bd.getDate()===t.getDate()&&bd.getMonth()===t.getMonth();
   document.getElementById('dbadge').textContent=`Dia 10 · ${bd.toLocaleDateString('pt-BR')}${isTd?' · HOJE':''}`;
-  const nb=document.getElementById('notif-btn');if(nb){nb.className='hdr-btn'+(S.notifEnabled?' on':'');nb.textContent=S.notifEnabled?'🔔 Notif. ativas':'🔕 Notificações';}
+  const nb=document.getElementById('notif-btn');if(nb){nb.className='hdr-btn'+(S.notifEnabled?' on':'');nb.textContent=S.notifEnabled?'🔔 Notificações':'🔕 Notificações';}
   const db=document.getElementById('drive-btn');if(db){db.className='hdr-btn drive'+(S.driveSynced?' synced':'');db.textContent=S.driveSynced?'☁️ Nuvem sync':'☁️ Salvar nuvem';}
   document.getElementById('content').innerHTML=
     S.tab==='clientes'?renderClientes():
@@ -999,12 +1257,18 @@ function renderClientes(){
     if(cs){
       const hasWpp=!!c.wpp;
       const wppBtn=(cs.cls==='cert-crit'||cs.cls==='cert-exp')&&hasWpp
-        ?`<button class="wbtn" style="padding:2px 7px;font-size:10px;margin-left:4px;" onclick="event.stopPropagation();sendCertWpp('${c.id}')">📲</button>`:'';
+        ?(S.statuses[c.id+'_cert_sent']
+        ?`<span style="font-size:9px;color:var(--grn);margin-left:4px;" title="Aviso enviado em ${S.statuses[c.id+'_cert_sent']}">✓</span>`
+        :`<button class="wbtn" style="padding:2px 7px;font-size:10px;margin-left:4px;" onclick="event.stopPropagation();sendCertWpp('${c.id}')">📲</button>`):'';
       certCell=`<span class="${cs.cls}" onclick="event.stopPropagation();">${cs.txt}${wppBtn}</span>`;
     }
     // Action cell: XML button with date
     let actionCell='<span style="color:var(--mut);font-size:11px;">—</span>';
-    if(c.xmlEnvio==='MANUAL'){
+    if(c.xmlEnvio==='NAO_ENVIA'){
+      actionCell='<span style="color:var(--mut);font-size:10px;font-style:italic;">Não envia</span>';
+    }else if(c.xmlEnvio==='AUTOMATICO'){
+      actionCell='<span style="color:var(--mut);font-size:10px;font-style:italic;">Automático</span>';
+    }else if(c.xmlEnvio==='MANUAL'){
       const xd=getXmlData(c.id);
       if(xd.sent){
         actionCell=`<div style="display:flex;flex-direction:column;align-items:flex-start;gap:1px;">
@@ -1043,10 +1307,24 @@ function renderClientes(){
       // xmlData handled by getXmlData inline
       rows+=`<tr class="exp-row"><td colspan="9"><div class="exp-panel">
         <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-          ${logo
-            ?`<div class="exp-logo-img" style="cursor:pointer;" onclick="uploadClientLogo('${c.id}',event)"><img src="${logo}" alt="${c.nome}"></div>`
-            :`<div class="exp-logo-ph" onclick="uploadClientLogo('${c.id}',event)"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span style="font-size:10px;">Subir logo</span></div>`}
-          <button class="folder-btn" onclick="openFolder('${c.pasta}',event)">
+          ${(()=>{
+            const bg=S.clientLogoBg[c.id]||'';
+            const bgStyle=bg?`background:${bg};`:'';
+            if(logo){
+              return `<div class="exp-logo-img" style="cursor:pointer;${bgStyle}" onclick="uploadClientLogo('${c.id}',event)"><img src="${logo}" alt="${c.nome}"></div>
+                <div style="display:flex;gap:6px;margin-top:2px;align-items:center;">
+                  <label title="Cor de fundo do logo" style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:10px;color:var(--mut);">
+                    <span>🎨</span>
+                    <input type="color" value="${bg||'#f0f5fa'}" style="width:22px;height:18px;border:none;border-radius:3px;cursor:pointer;padding:0;" 
+                      onchange="S.clientLogoBg['${c.id}']=this.value;save();render();" onclick="event.stopPropagation()">
+                    <span>fundo</span>
+                  </label>
+                  ${bg?`<button class="btn btn-g btn-sm" style="font-size:9px;padding:2px 6px;" onclick="event.stopPropagation();delete S.clientLogoBg['${c.id}'];save();render()">✕ limpar</button>`:''}
+                </div>`;
+            }
+            return `<div class="exp-logo-ph" onclick="uploadClientLogo('${c.id}',event)"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span style="font-size:10px;">Subir logo</span></div>`;
+          })()}
+          <button class="folder-btn" onclick="openFolder('${c.id}',event)">
             📁 ${c.pasta?'Abrir pasta':'Configurar pasta'}
           </button>
           ${c.pasta?`<div style="font-size:9px;color:var(--mut);text-align:center;word-break:break-all;max-width:150px;">${c.pasta}</div>`:''}
@@ -1060,7 +1338,15 @@ function renderClientes(){
           <div class="exp-f"><div class="exp-fl">Vencimento</div>
             <div class="exp-fv" style="display:flex;align-items:center;gap:7px;">
               ${c.certVenc||'—'} ${cs?`<span class="${cs.cls}">${cs.txt}</span>`:''}
-              ${cs&&(cs.cls==='cert-crit'||cs.cls==='cert-exp')&&c.wpp?`<button class="wbtn" style="padding:2px 7px;font-size:10px;" onclick="sendCertWpp('${c.id}')">📲 Aviso cert.</button>`:''}
+              ${(()=>{
+                const certSentDate=S.statuses[c.id+'_cert_sent'];
+                if(certSentDate) return `<div style="display:flex;flex-direction:column;gap:2px;">
+                  <button class="wbtn" style="padding:2px 7px;font-size:10px;background:var(--grnl);color:var(--grn);border-color:var(--grn);" onclick="sendCertWpp('${c.id}')">✓ Aviso enviado</button>
+                  <span style="font-size:9px;color:var(--mut);">em ${certSentDate}</span>
+                </div>`;
+                return cs&&(cs.cls==='cert-crit'||cs.cls==='cert-exp')&&c.wpp
+                  ?`<button class="wbtn" style="padding:2px 7px;font-size:10px;" onclick="sendCertWpp('${c.id}')">📲 Aviso cert.</button>`:'';
+              })()}
             </div>
           </div>
           <div class="exp-sec" style="margin-top:8px;">XML ao contador</div>
@@ -1152,7 +1438,7 @@ function renderModal(){
           <div class="fg"><label class="flbl">Email</label><input class="fin" id="fe" value="${e.email||''}" placeholder="email@cliente.com"></div>
           <div class="fg"><label class="flbl">CNPJ</label><input class="fin" id="fc" value="${e.cnpj||''}" placeholder="00.000.000/0000-00"></div>
           <div class="fg"><label class="flbl">Início</label><input class="fin" id="fi" value="${e.inicio||''}" placeholder="DD/MM/AAAA"></div>
-          <div class="fg"><label class="flbl">Pasta do cliente</label><input class="fin" id="fpasta" value="${e.pasta||''}" placeholder="Ex: C:\\Clientes\\NOME"></div>
+          <div class="fg"><label class="flbl">Pasta do cliente</label><input class="fin" id="fpasta" placeholder="Ex: C:\Clientes\NOME"></div>
           <div class="fg"><label class="flbl">Cert. digital vencimento</label><input class="fin" id="fce" value="${e.certVenc||''}" placeholder="DD/MM/AAAA"></div>
           <div class="fg"><label class="flbl">XML ao contador</label>
             <select class="fsel" id="fxml">
@@ -1192,9 +1478,9 @@ function renderCobranca(){
   const bol=sortAlpha(S.clients.filter(c=>c.ativo&&c.cobranca==='BOLETO'));
   const sem=S.clients.filter(c=>c.ativo&&c.cobranca==='SEM_COBRANCA');
   const tPix=pix.reduce((s,c)=>s+Number(c.valor),0);
-  const tPixS=pixS.reduce((s,c)=>s+Number(c.valor),0);
+  const tPixS=pixS.reduce((s,c)=>s+Number(c.valor)*6,0); // valor semestral = mensalidade x6
   const tBol=bol.reduce((s,c)=>s+Number(c.valor),0);
-  const tMes=tPix+(isJJ?tPixS+tBol:0);
+  const tMesTotal=tPix+tBol+(isJJ?tPixS:0); // boleto sempre, semestral só em JJ
 
   function pInfo(list){const p=list.filter(c=>getSt(c.id)==='pago').length;return`<span style="font-size:10px;color:var(--mut);">${p}/${list.length} pagos</span>`;}
 
@@ -1202,7 +1488,7 @@ function renderCobranca(){
     const st=getSt(c.id);
     return`<div class="bitem">
       <div style="flex:1;"><div class="bname">${c.nome}</div><div class="bresp">${c.responsaveis[0]||''}</div></div>
-      <div class="bval">${brl(c.valor)}</div>
+      <div class="bval">${brl(c.cobranca==='PIX_SEMESTRAL'?c.valor*6:c.valor)}</div>
       <div style="display:flex;gap:5px;align-items:center;flex-shrink:0;">
         <select class="ssel ${stCls(st)}" onchange="setSt('${c.id}',this.value)">
           <option value="pendente"${st==='pendente'?' selected':''}>Pendente</option>
@@ -1215,7 +1501,20 @@ function renderCobranca(){
       </div>
     </div>`;
   }
-  function bFoot(t){return`<div class="bfoot"><span style="font-size:10px;color:var(--mut);">TOTAL </span><span style="font-family:var(--fn);font-size:15px;font-weight:700;color:var(--navy2);">${brl(t)}</span></div>`;}
+  function bFoot(t,clients){
+    // Calcular recebido: clientes com status 'enviado' no mês atual
+    let recebido=0;
+    if(clients&&S.summaryVisible){
+      clients.forEach(c=>{
+        const st=S.statuses[c.id+'-'+y+'-'+m];
+        if(st==='enviado'||st==='pago')recebido+=Number(c.valor);
+      });
+    }
+    const recStr=S.summaryVisible&&recebido>0
+      ?`<span style="font-size:10px;color:var(--grn);margin-left:8px;">✓ ${brl(recebido)} recebido</span>`:'';
+    if(!S.summaryVisible) return '';
+    return`<div class="bfoot"><span style="font-size:10px;color:var(--mut);">TOTAL </span><span style="font-family:var(--fn);font-size:15px;font-weight:700;color:var(--navy2);">${brl(t)}</span>${recStr}</div>`;
+  }
 
   // System payment panel
   const hoje=new Date().getDate();
@@ -1228,9 +1527,9 @@ function renderCobranca(){
   return`
   <div class="bhdr">
     <div class="mnav"><button class="mnb" onclick="chgMonth(-1)">‹</button><div class="mdisp">${MESES[m]} ${y}</div><button class="mnb" onclick="chgMonth(1)">›</button></div>
-    <div style="display:flex;gap:6px;align-items:center;"><span style="font-size:11px;color:var(--mut);">Total esperado:</span><span style="font-family:var(--fn);font-size:21px;font-weight:700;color:var(--navy2);">${brl(tMes)}</span></div>
+    ${S.summaryVisible?`<div style="display:flex;gap:6px;align-items:center;"><span style="font-size:11px;color:var(--mut);">Total esperado:</span><span style="font-family:var(--fn);font-size:21px;font-weight:700;color:var(--navy2);">${brl(tMesTotal)}</span></div>`:''}
   </div>
-  ${isJJ?`<div class="alrt a-g"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div><b>${m===0?'Janeiro':'Julho'} — Mês de boletos!</b> Imprima e entregue os 6 boletos por cliente. Vencimento billing: <b>${bds}</b>.</div></div>`
+  ${isJJ?`<div class="alrt a-g"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div><b>${m===0?'Janeiro':'Julho'} — Mês de boletos!</b> Imprima e entregue os 6 boletos por cliente. Vencimento: <b>${bds}</b>.</div></div>`
   :`<div style="font-size:11px;color:var(--mut);margin-bottom:10px;padding:7px 11px;background:var(--pale);border-radius:7px;border:1px solid var(--brd);">📅 Vencimento: <b>${bds}</b></div>`}
   <div style="background:var(--wh);border:1px solid var(--brd);border-radius:10px;overflow:hidden;margin-bottom:11px;">
     <div style="padding:8px 13px;border-bottom:1px solid var(--brd);background:var(--pale);font-weight:700;font-size:12px;color:var(--navy2);display:flex;align-items:center;gap:6px;">
@@ -1238,35 +1537,48 @@ function renderCobranca(){
       Pagamentos sistemas
     </div>${sysPanel}
   </div>
-  <div class="bcols${isJJ?'':' '}">
-    <div class="bsec"><div class="bsh"><div class="bst"><span style="color:#1a4f8a;font-size:16px;">●</span>PIX Mensal</div><div style="display:flex;gap:7px;align-items:center;">${pInfo(pix)}<span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${pix.length}</span></div></div>
-      ${pix.map(c=>bRow(c,true)).join('')}${bFoot(tPix)}</div>
-    ${isJJ?`
-    <div class="bsec"><div class="bsh"><div class="bst"><span style="color:var(--grn);font-size:16px;">●</span>Boleto Semestral</div><div style="display:flex;gap:7px;align-items:center;">${pInfo(bol)}<span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${bol.length}</span></div></div>
-      ${bol.map(c=>bRow(c,false)).join('')}${bFoot(tBol)}</div>
+  <div class="bcols">
+    <!-- COLUNA ESQUERDA: PIX Mensal + Sem cobrança + PIX Semestral (JJ) -->
+    <div style="display:flex;flex-direction:column;gap:11px;">
+      <div class="bsec">
+        <div class="bsh">
+          <div class="bst"><span style="color:#1a4f8a;font-size:16px;">●</span>PIX Mensal</div>
+          <div style="display:flex;gap:7px;align-items:center;">${pInfo(pix)}<span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${pix.length}</span></div>
+        </div>
+        ${pix.map(c=>bRow(c,true)).join('')}${bFoot(tPix,pix)}
+      </div>
+      ${sem.length?`<div class="bsec">
+        <div class="bsh"><div class="bst"><span style="color:var(--mut);font-size:16px;">●</span>Sem cobrança</div><span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${sem.length}</span></div>
+        ${sem.map(c=>`<div class="bitem"><div style="flex:1;"><div class="bname" style="font-size:11.5px;color:var(--mut);">${c.nome}</div></div><span style="font-size:10px;color:var(--mut);">Sistema apenas</span></div>`).join('')}
+      </div>`:''}
+      ${isJJ?`<div class="bsec">
+        <div class="bsh">
+          <div class="bst"><span style="color:var(--yel);font-size:16px;">●</span>PIX Semestral <span style="font-size:9px;background:var(--yell);color:var(--yel);border:1px solid var(--yelb);border-radius:6px;padding:1px 6px;margin-left:4px;">COBRAR AGORA</span></div>
+          <div style="display:flex;gap:7px;align-items:center;">
+            ${pInfo(pixS)}<span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${pixS.length}</span>
+            ${pixS.length?`<button class="btn btn-grn btn-sm" onclick="markAllSemestral()">📲 Avisar todos</button>`:''}
+          </div>
+        </div>
+        ${pixS.map(c=>bRow(c,true)).join('')}${bFoot(tPixS,pixS)}
+      </div>`:''}
+    </div>
+    <!-- COLUNA DIREITA: Boleto (sempre) -->
     <div class="bsec">
       <div class="bsh">
-        <div class="bst"><span style="color:var(--yel);font-size:16px;">●</span>PIX Semestral ${isJJ?'<span style="font-size:9px;background:var(--yell);color:var(--yel);border:1px solid var(--yelb);border-radius:6px;padding:1px 6px;margin-left:4px;">COBRAR AGORA</span>':''}</div>
-        <div style="display:flex;gap:7px;align-items:center;">
-          ${pInfo(pixS)}
-          <span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${pixS.length}</span>
-          ${isJJ&&pixS.length?`<button class="btn btn-grn btn-sm" onclick="markAllSemestral()" title="Marcar todos como enviado">📲 Avisar todos</button>`:''}
-        </div>
+        <div class="bst"><span style="color:var(--grn);font-size:16px;">●</span>Boleto${isJJ?'<span style="font-size:9px;background:var(--grnl);color:var(--grn);border:1px solid #86efac;border-radius:6px;padding:1px 6px;margin-left:4px;">EMITIR CARNÊS</span>':''}</div>
+        <span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${bol.length}</span>
       </div>
-      ${pixS.map(c=>bRow(c,true)).join('')}${bFoot(tPixS)}</div>
-    `:`
-    <div class="bsec"><div class="bsh"><div class="bst"><span style="color:var(--grn);font-size:16px;">●</span>Boleto — Verificar pagamentos</div><span style="font-family:var(--fn);font-size:17px;font-weight:700;color:var(--mut);">${bol.length}</span></div>
       ${bol.map(c=>{const st=getSt(c.id);return`<div class="bitem"><div style="flex:1;"><div class="bname" style="font-size:11.5px;">${c.nome}</div></div><div class="bval">${brl(c.valor)}</div><select class="ssel ${stCls(st)}" onchange="setSt('${c.id}',this.value)"><option value="pendente">Pendente</option><option value="enviado">Enviado</option><option value="pago"${st==='pago'?' selected':''}>Pago</option><option value="atraso">Em atraso</option></select></div>`;}).join('')}
-      <div class="bfoot"><span style="font-size:10.5px;color:var(--mut);">Boletos entregues em Jan/Jul · Marque como pago ao receber</span></div>
-    </div>`}
+      ${bFoot(tBol,bol)}
+    </div>
   </div>
-  ${sem.length?`<div style="margin-top:9px;padding:8px 12px;background:var(--pale);border-radius:8px;border:1px solid var(--brd);font-size:11.5px;color:var(--mut);">Sem cobrança: ${sem.map(c=>c.nome).join(', ')}</div>`:''}`;
+`;
 }
 function chgMonth(d){S.bMonth+=d;if(S.bMonth>11){S.bMonth=0;S.bYear++;}if(S.bMonth<0){S.bMonth=11;S.bYear--;}render();}
 function markAllSemestral(){
   const pixS=S.clients.filter(c=>c.ativo&&c.cobranca==='PIX_SEMESTRAL');
   if(!pixS.length)return;
-  if(!confirm(`Enviar cobrança PIX via WhatsApp para todos os ${pixS.length} clientes PIX Semestral?`))return;
+  if(!confirm('Enviar cobrança PIX via WhatsApp para todos os '+pixS.length+' clientes PIX Semestral?'))return;
   pixS.forEach(c=>{if(c.wpp)sendWpp(c.id);else setSt(c.id,'enviado');});
   render();
 }
@@ -1290,7 +1602,7 @@ function renderFinanceiro(){
     const cl=l.clientId?S.clients.find(x=>x.id===l.clientId):null;
     return`<div class="lanc-row">
       <div class="ldot" style="background:${iR?'var(--grn)':'var(--red)'};"></div>
-      <div><div class="ldesc">${l.desc}</div>${cl?`<div class="lsub">${cl.nome}</div>`:''}</div>
+      <div><div class="ldesc">${l.desc}</div>${cl?'<div class="lsub">'+cl.nome+'</div>':''}</div>
       <div class="ldata">${l.data}</div>
       <div class="lval" style="color:${iR?'var(--grn)':'var(--red)'};">${iR?'+':'-'}${brl(l.valor)}</div>
       <button class="btn btn-g btn-sm" onclick="removeLancamento('${l.id}')" style="padding:3px 7px;font-size:12px;">✕</button>
@@ -1338,13 +1650,20 @@ function renderFinanceiro(){
 }
 function chgFM(d){S.fMonth+=d;if(S.fMonth>11){S.fMonth=0;S.fYear++;}if(S.fMonth<0){S.fMonth=11;S.fYear--;}render();}
 function submitLanc(){
-  const tipo=document.getElementById('ltype')?.value;
-  const desc=document.getElementById('ldesc')?.value?.trim();
-  const val=document.getElementById('lval')?.value;
-  const cli=document.getElementById('lcli')?.value;
-  const data=document.getElementById('ldata')?.value;
-  if(!desc||!val||parseFloat(val)<=0){alert('Preencha descrição e valor.');return;}
-  addLancamento(tipo,desc,val,cli,data);
+  try{
+    const tipo=document.getElementById('ltype')?.value||'RECEITA';
+    const desc=(document.getElementById('ldesc')?.value||'').trim();
+    const val=document.getElementById('lval')?.value||'';
+    const cli=document.getElementById('lcli')?.value||'';
+    const data=document.getElementById('ldata')?.value||new Date().toLocaleDateString('pt-BR');
+    if(!desc||!val||parseFloat(val)<=0){showToast('⚠️ Preencha descrição e valor','','var(--yel)');return;}
+    addLancamento(tipo,desc,val,cli,data);
+    // Clear form fields after success
+    ['ldesc','lval','lcli'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  }catch(e){
+    console.error('submitLanc error:',e);
+    showToast('❌ Erro ao registrar lançamento','Tente novamente.','var(--red)');
+  }
 }
 
 function bindEvents(){
@@ -1368,7 +1687,7 @@ document.getElementById('root').innerHTML=`
     <div class="hdr-r">
       <span id="save-ind" style="font-size:10px;color:var(--grn);opacity:0;transition:opacity .4s;margin-right:4px;white-space:nowrap;">✓ salvo</span>
       <div class="dbadge" id="dbadge" style="display:none;">carregando...</div>
-      <button class="hdr-btn" id="notif-btn" onclick="requestNotif()">🔕 Notificações</button>
+      <button class="hdr-btn" id="notif-btn" onclick="S.notifEnabled?openNotifCenter():requestNotif()">🔕 Notificações</button>
       <button class="hdr-btn drive" id="drive-btn" onclick="syncToCloud()" title="Salvar na nuvem (Supabase)">☁️ Salvar nuvem</button>
       <button class="hdr-btn" id="drive-load-btn" onclick="loadFromCloud()" style="font-size:10px;" title="Carregar da nuvem">📥 Carregar</button>
       <button class="hdr-btn" onclick="openSupabaseConfig()" style="font-size:10px;" title="Configurar Supabase">⚙️ Nuvem</button>
@@ -1380,7 +1699,7 @@ checkXmlReset();
 render();
 // loadGapi(); // Supabase replaces Google Drive
 if(S.notifEnabled)setTimeout(checkNotif,2000);
-setInterval(()=>{if(S.notifEnabled)checkNotif();},3600000);
+setInterval(()=>{if(S.notifEnabled)checkNotif();},300000); // a cada 5 min para pegar janelas 9/14/19h
 
 </script>
 </body>
